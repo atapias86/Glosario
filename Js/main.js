@@ -3,8 +3,7 @@ addEventListener("DOMContentLoaded", (e) => {
 
     btn.addEventListener("click", (e) => {
         e.preventDefault();
-        const text = "hola ADSI la mejor ficha";
-        const search = text.search("e");
-        document.querySelector("#resultado").insertAdjacentHTML("beforeend", "<br></br>" + search);
+        let list = [1,2,3,4,5,6,7,8]
+        list.forEach(e => document.querySelector("#resultado").insertAdjacentHTML("beforeend", "<br></br>" + e*5));
     })
 })
