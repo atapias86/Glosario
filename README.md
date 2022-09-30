@@ -1,6 +1,6 @@
 ## Ciclos
 
-Es proceso el cual se tiene pleno control del inicio, recorrido y el final.
+Es proceso el cual se tiene pleno control del inicio, recorrido y el final, con esto se puede ejecutar n veses y cerrar el ciclo en cualquier momento.
 
 ```js
 addEventListener("DOMContentLoaded",(e)=>{
