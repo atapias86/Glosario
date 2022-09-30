@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+.input{
+    width: 20%;
+    margin: auto;
+    padding: 10px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.tabla {
+    width: 20%;
+    border: 1px solid white;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.tabla th {
+    color: red;
+    text-align: center;
+    padding: 5px;;
+}
+
+.tabla,
+th,
+td {
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+}
+
+tr .th {
+    color: aqua;
+}
