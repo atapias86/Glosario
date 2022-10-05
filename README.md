@@ -148,3 +148,19 @@ function mult(num1, num2) {
 }
 ```
 
+## Funciones sucias
+
+Una función sucia es la cual no se va a utilizar muchas veces.
+
+```
+addEventListener("DOMContentLoaded", (e) => {
+  let btn = document.querySelector("#btn_inicio");
+  btn.addEventListener("click", (e) => {
+​    e.preventDefault();
+​    let resultado;
+​    resultado = 1 * 2 * 3;
+​    alert(resultado);
+  })
+})
+```
+
