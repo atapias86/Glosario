@@ -164,3 +164,19 @@ addEventListener("DOMContentLoaded", (e) => {
 })
 ```
 
+## Parámetros
+
+Los parámetros que se le pasan a la función pueden ser:  a) Valores simples a los que se denomina literales: por ejemplo 554 o true b) Variables que contienen un número, un texto o un valor booleano.
+
+```
+addEventListener("DOMContentLoaded", (e) => {
+  let btn = document.querySelector("#btn_inicio");
+  btn.addEventListener("click", (e) => {
+​    e.preventDefault();
+​    let resultado;
+​    resultado = (10* 50* 10 + 2)/100;
+​    alert(resultado);
+  })
+})
+```
+

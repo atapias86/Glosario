@@ -3,7 +3,7 @@ addEventListener("DOMContentLoaded", (e) => {
     btn.addEventListener("click", (e) => {
         e.preventDefault();
         let resultado;
-        resultado = 1 + 2;
+        resultado = (10* 50* 10 + 2)/100;
         alert(resultado);
     })
 })
