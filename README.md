@@ -286,3 +286,21 @@ addEventListener("DOMContentLoaded", (e) => {
 })
 ```
 
+## Funciones expresivas
+
+Es una variable que contiene adentro una función. Luego, siendo variable, la función podría alterarse o sustituirse.
+
+```js
+addEventListener("DOMContentLoaded", (e) => {
+  let btn_inicio = document.querySelector("#btn_inicio");
+  btn_inicio.addEventListener("click", (e) => {
+​    e.preventDefault();
+​    let resultado = document.querySelector("#resultado");
+​    let saludar = function (nombre) {
+​      resultado.insertAdjacentHTML("beforebegin", "<br></br>" + `hola ${nombre}`);
+​     }
+​     saludar("Alvaro");
+  })
+})
+```
+
