@@ -2,21 +2,9 @@ addEventListener("DOMContentLoaded", (e) => {
     let btn_inicio = document.querySelector("#btn_inicio");
     btn_inicio.addEventListener("click", (e) => {
         e.preventDefault();
+        tabla = [0,1,2,3,4,5,6,7,8,9,10,11,12];
         let resultado = document.querySelector("#resultado");
-        let num = function () {
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 0));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 1));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 2));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 3));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 4));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 5));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 6));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 7));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 8));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 9));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 10));
-            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 11));
-        };
-        num();
+        resultado.insertAdjacentHTML("beforebegin", "<br></br>" + tabla.map(e => e*9));
+        
     })
 })
