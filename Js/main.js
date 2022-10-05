@@ -1,23 +1,22 @@
 addEventListener("DOMContentLoaded", (e) => {
-    let from = document.querySelector("#form");
-    from.addEventListener("submit", (e) => {
+    let btn_inicio = document.querySelector("#btn_inicio");
+    btn_inicio.addEventListener("click", (e) => {
         e.preventDefault();
-        const list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-        data = Object.fromEntries(new FormData(e.target));
-        let num = Number(data.numero_mult);
-        document.querySelector("#tb").innerHTML = "";
-        from.reset();
-        if (num >= 1) {
-            for (let multp of list) {
-                let result = num * multp;
-                let plantillas = `
-                <tr>
-                    <td>${num}}</td>
-                    <td>${multp}</td>
-                    <td>${result}</td>
-                </tr>`;
-                document.querySelector("#tb").insertAdjacentHTML("beforeend", plantillas);
-            }
-        }
+        let resultado = document.querySelector("#resultado");
+        let num = function () {
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 0));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 1));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 2));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 3));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 4));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 5));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 6));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 7));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 8));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 9));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 10));
+            resultado.insertAdjacentHTML("beforebegin", "<br></br>" + (9 * 11));
+        };
+        num();
     })
 })
