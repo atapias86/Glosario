@@ -308,7 +308,7 @@ addEventListener("DOMContentLoaded", (e) => {
 
 Son todas aquellas que al principio tienen la palabra reservada function.
 
-```
+```js
 addEventListener("DOMContentLoaded", (e) => {
   let btn_inicio = document.querySelector("#btn_inicio");
   btn_inicio.addEventListener("click", (e) => {
