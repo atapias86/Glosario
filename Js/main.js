@@ -1,24 +1,23 @@
 addEventListener("DOMContentLoaded", (e) => {
-    let btn = document.querySelector("#btn_inicio");
-    btn.addEventListener("click", (e) => {
-        resultado = document.querySelector("#resultado");
+    let from = document.querySelector("#form");
+    from.addEventListener("submit", (e) => {
         e.preventDefault();
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 0));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 1));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 2));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 3));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 4));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 5));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 6));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 7));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 8));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 9));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 10));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 11));
-        resultado.insertAdjacentHTML("beforebegin","<br></br>" + mult(9, 12));
+        const list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        data = Object.fromEntries(new FormData(e.target));
+        let num = Number(data.numero_mult);
+        document.querySelector("#tb").innerHTML = "";
+        from.reset();
+        if (num >= 1) {
+            for (let multp of list) {
+                let result = num * multp;
+                let plantillas = `
+                <tr>
+                    <td>${num}}</td>
+                    <td>${multp}</td>
+                    <td>${result}</td>
+                </tr>`;
+                document.querySelector("#tb").insertAdjacentHTML("beforeend", plantillas);
+            }
+        }
     })
 })
-function mult(num1, num2) {
-    let mult = num1 * num2;
-    return mult;
-}
